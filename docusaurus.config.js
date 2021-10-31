@@ -8,8 +8,8 @@ module.exports = {
   tagline: "Dinosaurs are cool",
   onBrokenLinks: "ignore",
   onBrokenMarkdownLinks: "warn",
-  baseUrl: "/",
-  url: "https://your-docusaurus-test-site.com",
+  baseUrl: "/developer_experience/",
+  url: "https://personalempiricism.github.io/",
   favicon: "img/favicon.ico",
   organizationName: "facebook", // Usually your GitHub org/user name.
   projectName: "docusaurus", // Usually your repo name.
