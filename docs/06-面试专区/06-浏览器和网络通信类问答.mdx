@@ -1,0 +1,66 @@
+
+
+## 网络协议
+
+- 应用层协议(HTTP,HTTPS,FTP,SMTP)
+- 传输层协议(TCP,UDP)
+- 网络层协议(IP)
+- 物理层协议(APR)
+
+### HTTP协议
+
+一个HTTP请求从源端发出到在终端接收的处理过程都是要经过以下四层。其中每一层都有各自的协议。
+<img width="300" src={require("@site/static/HTTP请求过程.jpg").default}/>
+
+### TCP协议
+
+根据网络协议的分层模型,可以知道TCP是基于IP协议封装的
+
+<details>
+  <summary>TCP三次握手(或TLS握手)</summary>
+</details>
+<details>
+  <summary>四次挥手的流程</summary>
+</details>
+
+### UDP协议
+
+根据网络协议的分层模型,可以知道UDP也是基于IP协议封装的
+
+## http和https的区别
+
+
+## 一次完整的网络请求的过程
+
+
+<details>
+  <summary>将域名解析为IP</summary>
+  输入URL后，会先进行域名解析。优先查找本地host文件有无对应的IP地址，没有的话去本地DNS服务器查找，还不行的话，本地DNS服务器会去找根DNS服务器要一个域服务器的地址进行查询，域服务器将要查询的域名的解析服务器地址返回给本地DNS，本地DNS去这里查询就OK了。
+</details>
+
+<details>
+  <summary>发起网络请求(三次握手)</summary>
+
+  - http请求经过的是三次握手
+  - https请求还要经过TLS握手(交换秘钥)
+  
+  浏览器拿到服务器的IP地址后，会向它发送HTTP请求。HTTP请求经由一层层的处理、封装、发出之后，最终经由网络到达服务器，建立TCP/IP连接，服务器接收到请求并开始处理。
+
+</details>
+
+<details>
+  <summary>服务器构建响应(四次挥手)</summary>
+  服务器构建响应，再经由一层层的处理、封装、发出后，到达客户端，浏览器处理请求。
+</details>
+
+<details>
+  <summary>浏览器开始渲染页面</summary>
+  浏览器开始渲染页面，解析HTML，构建render树，根据render树的节点和CSS的对应关系，进行布局，绘制页面。
+</details>
+
+:::info 相关内容
+- [HTTP请求的完整过程](https://www.zhihu.com/zvideo/1326889251812786176)
+:::
+
+
+## http协议和socket协议的区别
