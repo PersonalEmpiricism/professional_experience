@@ -4,8 +4,8 @@ const darkCodeTheme = require("prism-react-renderer/themes/palenight");
 /** @type {import("@docusaurus/types").DocusaurusConfig} */
 module.exports = {
   noIndex:true,
-  title: "文档模板",
-  tagline: "Dinosaurs are cool",
+  title: "前端经验总结",
+  tagline: "我的面试经验及工作经验",
   onBrokenLinks: "ignore",
   onBrokenMarkdownLinks: "warn",
   baseUrl: "/developer_experience/",
