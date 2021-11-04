@@ -8,7 +8,7 @@ module.exports = {
   tagline: "我的面试经验及工作经验",
   onBrokenLinks: "ignore",
   onBrokenMarkdownLinks: "warn",
-  baseUrl: "/developer_experience/",
+  baseUrl: "/professional_experience/",
   url: "https://personalempiricism.github.io/",
   favicon: "img/favicon.ico",
   organizationName: "facebook", // Usually your GitHub org/user name.
