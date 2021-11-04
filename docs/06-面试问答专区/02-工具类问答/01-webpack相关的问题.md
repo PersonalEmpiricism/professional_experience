@@ -1,6 +1,5 @@
 
 
-
 ## webpack中loader和plugins的区别和共同点
 
 :::tip 相关内容
@@ -9,4 +8,5 @@
 
 loader的功能是转换,无事件监听机制,plugins通过监听事件来完成其他事情
 
-## 什么是静态编译,什么是动态编译
+## plugin能代替loader吗
+
