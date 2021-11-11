@@ -1,0 +1,30 @@
+
+:::info 相关内容
+- [彻底理解浏览器的缓存机制](https://zhuanlan.zhihu.com/p/53507705)
+- [什么是 HTTP 强制缓存？【JS面试题】](https://www.bilibili.com/video/BV1Cy4y157jq?from=search&seid=166429040741204111&spm_id_from=333.337.0.0)
+- [HTTP协商缓存【JS面试题】](https://www.bilibili.com/video/BV1n54y1E7wH?from=search&seid=166429040741204111&spm_id_from=333.337.0.0)
+- [协商缓存（对比缓存）中的标识【JS面试题】](https://www.bilibili.com/video/BV1gf4y1V7CH?from=search&seid=166429040741204111&spm_id_from=333.337.0.0)
+:::
+
+## 强制缓存
+
+强制缓存是基于缓存响应头触发的缓存机制
+- HTTP/1.0版本通过Expires控制
+- HTTP/1.1版本通过Cache-Control控制
+- 常见的是Cache-Control:max-age=xxx
+
+## 协商缓存
+
+协商缓存也叫对比缓存
+
+- 通过比较客户端和服务端的资源版本标识(`Last-Modified`和`ETag`)是否一致来确定是否需要使用缓存
+- 协商缓存需要发送资源请求,如果本地的资源版本和服务端的资源版本一致,则服务器会返回304状态码,不一致的话则正常返回200加载服务端资源
+
+名称 | 解释 | 精度 | 使用优先级
+-|-|-|-
+ETag | 资源对应的唯一字符串 | 精确到每一次 | 2
+Last-Modified | 资源上一次修改的时间 | 精确到秒 | 1
+
+## 强制缓存和协商缓存的本质区别
+
+对应的HTTP请求头不一样
